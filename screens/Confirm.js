@@ -7,8 +7,10 @@ import {
   TextInput,
   TouchableOpacity,
 } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 export default function Confirm() {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <Image
@@ -101,6 +103,9 @@ export default function Confirm() {
             borderRadius: 15,
             alignItems: "center",
             justifyContent: "center",
+          }}
+          onPress={() => {
+            navigation.navigate("SignOut");
           }}
         >
           <Text style={{ color: "#343434" }}>Confirm</Text>

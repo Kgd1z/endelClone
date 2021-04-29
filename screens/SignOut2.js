@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
-export default function SignOut() {
+export default function SignOut2() {
   const navigation = useNavigation();
 
   return (

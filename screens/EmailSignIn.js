@@ -7,20 +7,26 @@ import {
   TouchableOpacity,
   TextInput,
 } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 export default function EmailSignIn() {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.container}>
-      <Image
-        style={{
-          height: 30,
-          width: 30,
-          position: "absolute",
-          top: 30,
-          right: 0,
-        }}
-        source={require("../assets/close.png")}
-      />
+      <TouchableOpacity>
+        <Image
+          style={{
+            height: 30,
+            width: 30,
+            position: "absolute",
+            top: 30,
+            left: 130,
+          }}
+          source={require("../assets/close.png")}
+        />
+      </TouchableOpacity>
+
       <Image
         style={{ top: 210, left: 4, width: 130, height: 120 }}
         source={require("../assets/circle.png")}
@@ -75,6 +81,9 @@ export default function EmailSignIn() {
           borderRadius: 15,
           alignItems: "center",
           justifyContent: "center",
+        }}
+        onPress={() => {
+          navigation.navigate("Confirm");
         }}
       >
         <Text style={{ color: "#343434" }}>Continue</Text>

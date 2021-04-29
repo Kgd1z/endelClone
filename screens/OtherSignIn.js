@@ -1,7 +1,10 @@
 import React from "react";
 import { StyleSheet, Text, View, TouchableOpacity, Image } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 export default function OtherSignIn() {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.container}>
       <Image
@@ -85,6 +88,9 @@ export default function OtherSignIn() {
           alignItems: "center",
           justifyContent: "center",
           borderWidth: 2,
+        }}
+        onPress={() => {
+          navigation.navigate("EmailSignIn");
         }}
       >
         <Text style={{ color: "white" }}>Sign in with Email</Text>

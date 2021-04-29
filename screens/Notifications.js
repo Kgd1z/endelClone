@@ -1,50 +1,56 @@
 import React from "react";
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
-
+import { useNavigation } from "@react-navigation/native";
 export default function Notifications() {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
-      <View
-        style={{
-          borderWidth: 2,
-          borderColor: "white",
-          borderRadius: 10,
-          height: 80,
-          width: 250,
-          padding: 9,
-        }}
-      >
-        <Text style={{ color: "#6B7280", paddingBottom: 2, fontSize: 10 }}>
-          Endel
-        </Text>
-        <Text
+      <View style={{ top: 170, alignItems: "center" }}>
+        <View
           style={{
-            color: "#6B7280",
-            paddingBottom: 2,
-            position: "absolute",
-            fontSize: 10,
-            top: 7,
-            right: 6,
+            borderWidth: 2,
+            borderColor: "white",
+            borderRadius: 10,
+            height: 80,
+            width: 250,
+            padding: 9,
           }}
         >
-          Now
+          <Text style={{ color: "#6B7280", paddingBottom: 2, fontSize: 10 }}>
+            Endel
+          </Text>
+          <Text
+            style={{
+              color: "#6B7280",
+              paddingBottom: 2,
+              position: "absolute",
+              fontSize: 10,
+              top: 7,
+              right: 6,
+            }}
+          >
+            Now
+          </Text>
+          <Text
+            style={{ color: "white", paddingBottom: 2, fontWeight: "bold" }}
+          >
+            Its Morning Energy Pack
+          </Text>
+          <Text style={{ color: "#6B7280", paddingBottom: 2, fontSize: 10 }}>
+            Try to take a deep breath and make it happen
+          </Text>
+          <Text style={{ color: "#6B7280", paddingBottom: 2, fontSize: 10 }}>
+            Try Focus
+          </Text>
+        </View>
+        <Text style={{ color: "white", paddingTop: 35, fontWeight: "bold" }}>
+          Get Useful Notifications
         </Text>
-        <Text style={{ color: "white", paddingBottom: 2, fontWeight: "bold" }}>
-          Its Morning Energy Pack
-        </Text>
-        <Text style={{ color: "#6B7280", paddingBottom: 2, fontSize: 10 }}>
-          Try to take a deep breath and make it happen
-        </Text>
-        <Text style={{ color: "#6B7280", paddingBottom: 2, fontSize: 10 }}>
-          Try Focus
+        <Text style={{ color: "white", paddingTop: 20, fontSize: 11 }}>
+          Endel will send you insights and wellness tips
         </Text>
       </View>
-      <Text style={{ color: "white", paddingTop: 35, fontWeight: "bold" }}>
-        Get Useful Notifications
-      </Text>
-      <Text style={{ color: "white", paddingTop: 20, fontSize: 11 }}>
-        Endel will send you insights and wellness tips
-      </Text>
+
       <TouchableOpacity
         style={{
           backgroundColor: "#343434",
@@ -56,6 +62,9 @@ export default function Notifications() {
           alignItems: "center",
           justifyContent: "center",
           borderWidth: 2,
+        }}
+        onPress={() => {
+          navigation.navigate("SignIn");
         }}
       >
         <Text style={{ color: "white" }}>Skip</Text>
@@ -86,6 +95,6 @@ const styles = StyleSheet.create({
     color: "white",
     backgroundColor: "black",
     alignItems: "center",
-    justifyContent: "center",
+    // justifyContent: "center",
   },
 });

@@ -7,8 +7,11 @@ import {
   TextInput,
   TouchableOpacity,
 } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 export default function Finish() {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.container}>
       <View style={{ top: 70, alignItems: "center", width: 320 }}>
@@ -59,6 +62,9 @@ export default function Finish() {
             alignItems: "center",
             justifyContent: "center",
             borderWidth: 2,
+          }}
+          onPress={() => {
+            navigation.navigate("Finish");
           }}
         >
           <Text style={{ color: "white" }}>Finish</Text>
