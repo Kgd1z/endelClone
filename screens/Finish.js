@@ -64,7 +64,7 @@ export default function Finish() {
             borderWidth: 2,
           }}
           onPress={() => {
-            navigation.navigate("Finish");
+            navigation.navigate("SignOut2");
           }}
         >
           <Text style={{ color: "white" }}>Finish</Text>
