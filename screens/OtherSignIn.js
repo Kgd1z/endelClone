@@ -7,6 +7,23 @@ export default function OtherSignIn() {
 
   return (
     <View style={styles.container}>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate("SignIn");
+        }}
+      >
+        <Image
+          style={{
+            height: 30,
+            width: 30,
+            position: "absolute",
+            top: 30,
+            left: 130,
+          }}
+          source={require("../assets/close.png")}
+        />
+      </TouchableOpacity>
+
       <Image
         style={{ height: 200, width: 200, position: "absolute", top: 120 }}
         source={require("../assets/desktop3.png")}

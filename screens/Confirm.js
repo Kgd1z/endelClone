@@ -13,16 +13,23 @@ export default function Confirm() {
   const navigation = useNavigation();
   return (
     <View style={styles.container}>
-      <Image
-        style={{
-          height: 30,
-          width: 30,
-          position: "absolute",
-          left: 300,
-          top: 30,
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate("SignIn");
         }}
-        source={require("../assets/close.png")}
-      />
+      >
+        <Image
+          style={{
+            height: 30,
+            width: 30,
+            position: "absolute",
+            left: 140,
+            top: 30,
+          }}
+          source={require("../assets/close.png")}
+        />
+      </TouchableOpacity>
+
       <View
         style={{ top: 230, justifyContent: "center", alignItems: "center" }}
       >

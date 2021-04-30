@@ -1,8 +1,19 @@
 import React from "react";
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import { Image } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+
 export default function Sound() {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.container}>
+      <View style={{ bottom: 100 }}>
+        <Image
+          source={require("../assets/fireworks.png")}
+          style={{ width: 200, height: 200 }}
+        />
+      </View>
       <Text style={{ color: "white", fontSize: 16, fontWeight: "bold" }}>
         Make the Most of Your Day
       </Text>
@@ -16,7 +27,12 @@ export default function Sound() {
         With the sound that adapts to the circadian rhythm
       </Text>
 
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => {
+          navigation.navigate("Notifications");
+        }}
+      >
         <Text style={{ color: "white" }}>Continue</Text>
       </TouchableOpacity>
     </View>

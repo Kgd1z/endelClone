@@ -66,7 +66,7 @@ export default function SignOut2() {
           borderWidth: 2,
         }}
         onPress={() => {
-          navigation.navigate("Finish");
+          navigation.navigate("SpecialOffer");
         }}
       >
         <Text style={{ color: "white" }}>Continue</Text>

@@ -14,7 +14,11 @@ export default function EmailSignIn() {
 
   return (
     <View style={styles.container}>
-      <TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate("SignIn");
+        }}
+      >
         <Image
           style={{
             height: 30,
